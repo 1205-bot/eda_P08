@@ -15,7 +15,7 @@ struct DLista {
 }
 
 DLista* crear_lista();
-
+int lista_num_nodos(DLista *l);
 bool lista_es_vacia(DLista *l);
 bool insertar_lista_vacia(DLista *l, void *info, size_t size);
 bool insertar_lista_inicio(DLista *l, void *info, size_t size);
