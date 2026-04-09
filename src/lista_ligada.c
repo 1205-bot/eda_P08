@@ -1,5 +1,11 @@
 #include "lista_ligada.h"
 
+int lista_num_nodos(DLista *l) {
+    int i = 0;
+    for(Nodo *tmp = l->head; tmp != NULL; tmp = tmp->sig, i++);
+    return i;
+}
+
 DLista* crear_lista() {
     DLista *l = (DLista*)malloc(sizeof(DLista));
     l->head = l->tail = NULL;
