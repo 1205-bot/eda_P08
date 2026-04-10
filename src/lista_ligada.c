@@ -47,8 +47,8 @@ bool insertar_lista_posicion(DLista *l, int p, void *info, size_t size) {
     if(DLista_es_vacia(l)) return insertar_lista_vacia(l, info, size);
     if(p == 0) return insertar_lista_inicio(l, info, size);
     if(p >= 1) {
-        DLista *tmp = l->head;
-        for(int i = 0; i < p-1; i++) tmp = tmp->sig;
+        Nodo *tmp = l->head;
+        for(int i = 0; i < p-1; tmp = tmp->sig, i++);
         Nodo *n = crear_nodo(info, size);
         n->ant = tmp;
         n->sig = tmp->sig;
