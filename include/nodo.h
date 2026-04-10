@@ -17,6 +17,6 @@ struct Nodo {
 
 Nodo *crear_nodo(void *info, size_t size);
 void liberar_nodo(Nodo *n);
-bool actualizar_nodo(void *info, size_t size);
+bool actualizar_nodo(Nodo *n, void *info, size_t size);
 
 #endif
