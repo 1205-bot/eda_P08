@@ -5,14 +5,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <stdbool.h>
 
-
-typedef struct DLista DLista;
-
-struct DLista {
+typedef struct DLista {
     Nodo *head;
     Nodo *tail;
-}
+    
+} DLista;
 
 DLista* crear_lista();
 int lista_num_nodos(DLista *l);
